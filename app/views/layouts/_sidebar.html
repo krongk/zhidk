@@ -1,0 +1,21 @@
+<div id="sidebar">
+
+  <!-- Sidebar -->
+  <section>
+    <h3>关注直达客</h3>
+    <p><%=image_tag 'qr-zhidak.png' %></p>
+    <footer>
+      <a href="<%= price_path %>" class="button icon fa-cny"> 价格方案 </a>
+    </footer>
+  </section>
+
+  <section>
+    <h3>相关文章</h3>
+    <ul class="style2">
+      <% @relative_posts.each do |post| %>
+        <li><i class="icon fa-<%= ['star', 'star-half', 'star-half-o', 'start-o'][rand(3)]%>"></i>   <a href="<%= post_path(post.id) %>"><%= post.title %></a></li>
+      <% end %>
+    </ul>
+  </section>
+
+</div>

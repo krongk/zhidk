@@ -1,0 +1,25 @@
+<% title @post.title %>
+<% meta_keywords @post.title %>
+<% meta_description @post.title %>
+<!-- Main -->
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row 200%">
+      <div class="12u">
+        <div id="content">
+
+          <!-- Content -->
+            <article>
+
+              <h2><%= @post.title %></h2>
+              <hr/>
+              <%= raw @post.content %>
+
+            </article>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>  

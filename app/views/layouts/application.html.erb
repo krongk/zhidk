@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : '直达客' %></title>
+  <meta name="keywords" content="<%= content_for?(:meta_keywords) ? yield(:meta_keywords) : '直达客，O2O营销' %>" />
+  <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : '直达客' %>">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="zh-CN" />
+  <meta name="robots" content="ALL,FOLLOW" />
+  <meta name="author" content="me@song.xj.cn" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!--[if lt IE 9]>
+    <script src="/ie/html5shiv.js" type="text/javascript"></script>
+    <script src="/ie/respond.min.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= csrf_meta_tags %>
+</head>
+<body class="homepage">
+  <%= render 'layouts/header' %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</body>
+</html>

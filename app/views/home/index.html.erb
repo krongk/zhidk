@@ -1,0 +1,93 @@
+<% meta_keywords '首页' %>
+<% meta_description '直达电话：18080810818' %>
+
+<!-- Banner -->
+<div id="banner-wrapper">
+  <div id="banner" class="box container">
+    <div class="row">
+      <div class="8u">
+        <h2>企业O2O全网营销系统</h2>
+        <p>PC网站＋移动微网＋微信公共号＋百度直达号＋产品二维码</p>
+        <small>五大流量入口，让业务精准直达客户！</small>
+        
+        <small>八大营销模式，让生意遍布整个网络！</small>
+      </div>
+      <div class="4u">
+        <ul>
+          <li><a href="/contact" class="button big icon fa-arrow-circle-right">移动你的生意</a></li>
+          <li><a href="/about" class="button alt big icon fa-question-circle">了解更多</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div id="features-wrapper">
+  <div class="container">
+    <div class="row">
+      <% @posts.each do |post| %>
+        <div class="4u">
+          <!-- Box -->
+          <section class="box feature">
+            <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.image_path %>" alt="<%= post.keywords %>" /></a>
+            <div class="inner">
+              <header>
+                <h2><%= post.title %></h2>
+                <p><%= post.keywords %></p>
+              </header>
+              <p><%= post.description %></p>
+            </div>
+          </section>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- Main -->
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="4u">
+      
+        <!-- Sidebar -->
+          <div id="sidebar">
+            <section class="widget thumbnails">
+              <h3>他们已经接入直达客</h3>
+              <div class="grid">
+                <div class="row no-collapse 50%">
+                  <% 2.times do %>
+                    <% post = @cases.shift %>
+                    <% next if post.nil? %>
+                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                  <% end %>
+                </div>
+                <div class="row no-collapse 50%">
+                  <% 2.times do %>
+                    <% post = @cases.shift %>
+                    <% next if post.nil? %>
+                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                  <% end %>
+                </div>
+              </div>
+              <a href="/case" class="button icon fa-file-text-o">查看更多</a>
+            </section>
+          </div>
+      
+      </div>
+      <div class="8u important(collapse)">
+
+        <!-- Content -->
+          <div id="content">
+            <section class="last">
+              <h2><%= @about.title %></h2>
+              <%= raw @about.content.truncate(500) %>
+              <a href="/about" class="button icon fa-arrow-circle-right">了解更多</a>
+            </section>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

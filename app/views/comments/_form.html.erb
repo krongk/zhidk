@@ -1,0 +1,10 @@
+<%= simple_form_for(@comment) do |f| %>
+  <%= f.error_notification %>
+
+  <%#= f.input :name %>
+  <%= f.input :mobile_phone %>
+  <%= f.input :content %>
+  <hr>
+  <%= f.button :submit, class: 'btn btn-large btn-primary' %>  
+
+<% end %>
