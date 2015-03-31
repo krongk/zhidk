@@ -15,7 +15,7 @@
       <div class="4u">
         <ul>
           <li><a href="/contact" class="button big icon fa-arrow-circle-right">移动你的生意</a></li>
-          <li><a href="/about" class="button alt big icon fa-question-circle">了解更多</a></li>
+          <li><a href="/post/1" class="button alt big icon fa-question-circle">了解更多</a></li>
         </ul>
       </div>
     </div>
@@ -60,18 +60,18 @@
                   <% 2.times do %>
                     <% post = @cases.shift %>
                     <% next if post.nil? %>
-                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                    <div class="6u"><a href="#<%#= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
                   <% end %>
                 </div>
                 <div class="row no-collapse 50%">
                   <% 2.times do %>
                     <% post = @cases.shift %>
                     <% next if post.nil? %>
-                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                    <div class="6u"><a href="#<%#= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
                   <% end %>
                 </div>
               </div>
-              <a href="/case" class="button icon fa-file-text-o">查看更多</a>
+              <!-- <a href="/case" class="button icon fa-file-text-o">查看更多</a> -->
             </section>
           </div>
       
@@ -82,8 +82,8 @@
           <div id="content">
             <section class="last">
               <h2><%= @about.title %></h2>
-              <%= raw @about.content.truncate(500) %>
-              <a href="/about" class="button icon fa-arrow-circle-right">了解更多</a>
+              <%= raw @about.content.truncate(306) %>
+              <a href="<%= post_path(@about) %>" class="button icon fa-arrow-circle-right">了解更多</a>
             </section>
           </div>
 
