@@ -13,9 +13,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        if Rails.env == 'production'
+  #      if Rails.env == 'production'
           SmsSendWorker.perform_async(ENV['ADMIN_PHONE'].split('|').join(','), "【直达客】#{@comment.mobile_phone}留言：#{@comment.content.to_s.truncate(36)}")
-        end
+   #     end
         format.html { redirect_to root_path, notice: '提交成功，我们会尽快回复您的请求.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
