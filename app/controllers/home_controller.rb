@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @posts = Page.recent(3, :channel => 'post')
-    @cases = Page.recent(4, :channel => 'case')
+    @portfolios = Page.recent(3, :channel => 'portfolio')
+    @cases = Page.recent(6, :channel => 'case')
     @about = Page.find_by(short_title: 'about')
     @about ||= Page.first
   end

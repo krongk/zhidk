@@ -6,6 +6,26 @@ class Page < ActiveRecord::Base
   belongs_to :channel
   self.per_page = 24
 
+  def get_image_path
+    if image_path
+      'http://admin.zhidak.com/' + image_path
+    else
+      '/assets/logo-1.png'
+    end
+  end
+
+  def get_content
+    if content
+      begin
+        content.gsub(/src="(\/ckeditor_assets\/pictures\/\d+\/)/, 'class="img-responsive" src="http://admin.zhidak.com/\1')
+      rescue
+        '页面解析有错'
+      end
+    else
+      '没有任何内容'
+    end
+  end
+
   def short_description(count = 50)
     self.description.to_s.truncate(count)
   end

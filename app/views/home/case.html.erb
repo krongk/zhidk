@@ -11,7 +11,9 @@
 
           <!-- Content -->
             <article>
-
+            <% @posts.each do |post| %>
+              <%= raw post.get_content %>
+            <% end 
        
 
             </article>
