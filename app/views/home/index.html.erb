@@ -57,21 +57,21 @@
               <h3>他们已经接入直达客</h3>
               <div class="grid">
                 <div class="row no-collapse 50%">
-                  <% 2.times do %>
-                    <% post = @cases.shift %>
+                  <% (0..1).each do |i|%>
+                    <% post = @cases[i] %>
                     <% next if post.nil? %>
-                    <div class="6u"><a href="#<%#= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
                   <% end %>
                 </div>
                 <div class="row no-collapse 50%">
-                  <% 2.times do %>
-                    <% post = @cases.shift %>
+                  <% (2..3).each do |i| %>
+                    <% post = @cases[i] %>
                     <% next if post.nil? %>
-                    <div class="6u"><a href="#<%#= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
+                    <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.image_path %>" alt="<%= post.title %>" /></a></div>
                   <% end %>
                 </div>
               </div>
-              <!-- <a href="/case" class="button icon fa-file-text-o">查看更多</a> -->
+              <a href="/case" class="button icon fa-file-text-o">查看更多</a>
             </section>
           </div>
       

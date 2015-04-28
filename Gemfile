@@ -1,63 +1,86 @@
 source 'http://ruby.taobao.org'
+ruby '2.0.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
-
-# Use mysql as the database for Active Record
-gem 'mysql2'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-gem 'sidekiq'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
-gem 'figaro'
-
+gem 'rails', '~> 4.2.1'
+gem 'sass-rails', '~> 5.0.3'
+gem 'uglifier', '~> 2.7.1'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails', '4.0.3'
+gem 'turbolinks', '2.5.3'
+gem 'jbuilder', '~> 2.2.13'
+gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'bootstrap-will_paginate'
+gem 'font-awesome-rails', '4.3.0.0'
+gem 'cancan', '1.6.10'
+gem 'devise', '3.4.1'
+gem 'figaro', '1.1.0'
+gem 'mysql2', '0.3.18'
+gem 'rolify', '4.0.0'
+gem 'simple_form', '3.1.0'
+gem 'acts-as-taggable-on', '3.5.0'
+gem 'sitemap_generator', '5.0.5'
+gem 'whenever', :require => false
+# For linux
 gem 'therubyracer', :platform=>:ruby
 
-gem 'figaro'
+#page caching
+# http://www.rubytutorial.io/page-caching-with-rails-4
+gem 'actionpack-page_caching'
+#gem 'rails-observers' #manually remove the cache pages on raincms
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+#Liquid templete html
+#gem 'liquid'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+#add :git to bugfix open dialog error
+#gem "ckeditor", :git => "git@github.com:galetahub/ckeditor.git"
+gem 'ckeditor', github: 'galetahub/ckeditor'
+#File upload
+gem 'paperclip'
+gem 'paperclip-qiniu'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+#Excel processing
+# gem 'roo', '>=1.11.2' 
+# gem 'rubyzip', "~> 0.9.9" #fix the error: cannot load such file -- zip/zipfilesystem
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+#Wizard
+#gem 'wicked'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
-gem 'bootstrap-sass', '>= 3.0.0.0'
-gem 'bootstrap-will_paginate'
-gem 'font-awesome-rails'
-gem 'simple_form'
-gem 'sitemap_generator'
+#I18n
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
+gem 'i18n_yaml_generator'
 
-group :development, :test do
+#Queue
+gem 'sidekiq'
+
+#Markdown syntax
+gem "nokogiri"
+gem "htmlentities"
+#gem 'slodown'
+
+#Send Mail
+#gem 'mailgun'
+
+#Pinyin.t('中国', splitter: '-') => "zhong-guo"
+gem 'chinese_pinyin'
+
+group :development do
   gem 'pry'
+  gem 'pry-byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
 end
-
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+end
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+end

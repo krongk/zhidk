@@ -9,10 +9,10 @@
           <section class="widget links">
             <h3>行业解决方案</h3>
             <ul class="style2">
-            <% 4.times do %>
-              <% post = portfolios.shift %>
+            <% (0..3).each do |i| %>
+              <% post = portfolios[i] %>
               <% break if post.nil? %>
-              <li><%= link_to p.title, post_path(post) %></li>
+              <li><%= link_to post.title, post_path(post) %></li>
             <% end %>
             </ul>
           </section>
@@ -24,10 +24,10 @@
           <section class="widget links">
             <h3>&nbsp;</h3>
             <ul class="style2">
-              <% 4.times do %>
-                <% post = portfolios.shift %>
+              <% (4..7).each do |i| %>
+                <% post = portfolios[i] %>
                 <% break if post.nil? %>
-                <li><%= link_to p.title, post_path(post) %></li>
+                <li><%= link_to post.title, post_path(post) %></li>
               <% end %>
             </ul>
           </section>
