@@ -14,11 +14,11 @@
               <div class="4u">
                 <!-- Box -->
                 <section class="box feature">
-                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.image_path %>" alt="<%= post.keywords %>" /></a>
+                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
                   <div class="inner">
                     <header>
                       <h2><%= post.title %></h2>
-                      <p>Maybe here as well I think</p>
+                      <p><%= post.keywords %></p>
                     </header>
                     <p><%= post.description %></p>
                   </div>
