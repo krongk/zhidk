@@ -2,6 +2,51 @@
 <% meta_keywords '解决方案' %>
 <% meta_description '直达电话：18080810818' %>
 
+<!-- Banner -->
+<div id="banner-wrapper">
+  <div id="banner" class="box container">
+    <div class="row">
+      <div class="8u">
+        <h2>直达客如何帮助企业实现O2O</h2>
+        <p>直达客客户遍及家具家居企业、生态农业、洗衣连锁、垂直O2O等行业</p>
+      </div>
+      <div class="4u">
+        <ul>
+          <li><a href="/contact" class="button big icon fa-arrow-circle-right">马上联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div id="features-wrapper">
+  <div class="container">
+    <div class="row">
+      <% @posts.each do |post| %>
+        <div class="4u">
+          <!-- Box -->
+          <section class="box feature">
+            <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
+            <div class="inner">
+              <header>
+                <h2><%= post.title %></h2>
+                <p><%= post.keywords %></p>
+              </header>
+              <p><%= post.description %></p>
+            </div>
+          </section>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="12u">
+        <%= will_paginate @posts %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Main -->
 <div id="main-wrapper">
   <div class="container">
@@ -10,21 +55,9 @@
         <div id="content">
 
           <div class="row">
-            <% @posts.each do |post| %>
-              <div class="4u">
-                <!-- Box -->
-                <section class="box feature">
-                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
-                  <div class="inner">
-                    <header>
-                      <h2><%= post.title %></h2>
-                      <p><%= post.keywords %></p>
-                    </header>
-                    <p><%= post.description %></p>
-                  </div>
-                </section>
-              </div>
-            <% end %>
+            <div class="12u">
+              
+            </div>
           </div>
 
         </div>

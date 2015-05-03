@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   default_scope { order('updated_at DESC') }
 
   belongs_to :channel
-  self.per_page = 24
+  self.per_page = 9
 
   def get_image_path
     if image_path
@@ -17,7 +17,7 @@ class Page < ActiveRecord::Base
   def get_content
     if content
       begin
-        content.gsub(/src="(\/ckeditor_assets\/pictures\/\d+\/)/, 'class="image fit" src="http://admin.zhidak.com/\1')
+        content.gsub(/src="(\/ckeditor_assets\/pictures\/\d+\/)/, 'class="image fit max800" src="http://admin.zhidak.com/\1')
       rescue
         '页面解析有错'
       end

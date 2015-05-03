@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require font-awesome
+ *= require pagination
  *= require 'css/skel'
  *= require 'css/style'
  *= require 'common'

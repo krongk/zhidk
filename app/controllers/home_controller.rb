@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
   def case
     @posts = Channel.find_by(short_title: 'case').pages.page(params[:page])
-    @relative_posts = Page.limit(10)
+    # @relative_posts = Page.limit(10)
   end
 
   def price

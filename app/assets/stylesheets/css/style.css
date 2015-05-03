@@ -286,7 +286,12 @@
 				}
 
 	/* Image */
-
+		img.center {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+		}
+		
 		.image
 		{
 			display: inline-block;
@@ -298,6 +303,10 @@
 				display: block;
 				width: 100%;
 				border-radius: 8px;
+			}
+
+			.image.max800{
+				max-width: 600px;
 			}
 
 			.image.fit
