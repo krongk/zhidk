@@ -99,7 +99,7 @@
 	hr
 	{
 		border: 0;
-		border-top: solid 1px #eee;
+		border-top: solid 1px #ff4486;
 	}
 	
 	blockquote
@@ -634,6 +634,9 @@
 			font-family: 'Oleo Script', serif;
 			font-weight: 400;
 		}
+		#logo h1 a:visited{
+			color: #fff;
+		}
 		
 		#logo span
 		{
@@ -693,4 +696,16 @@
 		text-align: center;
 	}
 	
+/*********************************************************************************/
+/* Post                                                                        */
+/*********************************************************************************/
 
+.post-content h3{
+	margin-left: 0px;
+	color: #222;
+}
+
+.post-content h4{
+	color: #222;
+	font-weight: 600;
+}

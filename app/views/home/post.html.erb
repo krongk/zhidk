@@ -10,10 +10,21 @@
 
           <!-- Content -->
           <article>
-
             <h2><%= @post.title %></h2>
             <hr/>
-            <div class="image fit">
+            <div class="row">
+              <div class="8u">
+                <strong>发布时间：</strong> <%= get_date(@post.updated_at) %> <strong>关键词：</strong> <%= @post.keywords %>
+              </div>
+              <div class="4u">
+                <!--bshare(master@inruby.com) -->
+                <div class="bshare-custom icon-medium-plus"><a title="分享到QQ空間" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人網" class="bshare-renren"></a><a title="分享到騰訊微博" class="bshare-qqmb"></a><a title="分享到網易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.com/b/buttonLite.js#style=-1&amp;uuid=48e86a2c-b75c-4161-b8cd-881d2bcd7a44&amp;pophcol=2&amp;lang=zh_TW"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.com/b/bshareC0.js"></script>
+                <!-- bshare end -->
+              </div>
+            </div>
+            <hr/>
+
+            <div class="post-content image fit">
               <%= raw @post.get_content %>
             </div>
           </article>

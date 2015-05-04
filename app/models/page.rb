@@ -17,7 +17,8 @@ class Page < ActiveRecord::Base
   def get_content
     if content
       begin
-        content.gsub(/src="(\/ckeditor_assets\/pictures\/\d+\/)/, 'class="image fit max800" src="http://admin.zhidak.com/\1')
+        the_content = content.gsub(/src="(\/ckeditor_assets\/pictures\/\d+\/)/, 'class="image fit max800" src="http://admin.zhidak.com/\1')
+        the_content.gsub!(/<h3>/i, '<h3><i class="fa fa-dot-circle-o fa-lg"></i> ')
       rescue
         '页面解析有错'
       end
