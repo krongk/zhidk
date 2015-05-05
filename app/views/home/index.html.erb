@@ -1,3 +1,4 @@
+<% title '【直达客】精准直达客户，移动你的生意！' %>
 <% meta_keywords '首页' %>
 <% meta_description '直达电话：18080810818' %>
 
@@ -30,10 +31,10 @@
         <div class="4u">
           <!-- Box -->
           <section class="box feature">
-            <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
+            <a href="<%= post_path(post.short_title)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
             <div class="inner">
               <header>
-                <h2><%= post.title %></h2>
+                <h2><%= link_to post.title, post_path(post.short_title) %></h2>
                 <p><%= post.keywords %></p>
               </header>
               <p><%= post.description %></p>

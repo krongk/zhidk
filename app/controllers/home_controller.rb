@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def post
-    @post = Page.find(params[:id])
+    @post = params[:id] =~ /^\d+$/ ? Page.find(params[:id]) : Page.find_by(short_title: params[:id])
     @post ||= Page.first
     @relative_posts = Page.limit(10)
   end
