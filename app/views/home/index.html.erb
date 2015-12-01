@@ -51,7 +51,6 @@
   <div class="container">
     <div class="row">
       <div class="4u">
-      
         <!-- Sidebar -->
           <div id="sidebar">
             <section class="widget thumbnails">
@@ -82,19 +81,27 @@
               <a href="/case" class="button icon fa-file-text-o">查看更多</a>
             </section>
           </div>
-      
       </div>
-      <div class="8u important(collapse)">
-
-        <!-- Content -->
+      <div class="4u important(collapse)">
           <div id="content">
             <section class="last">
-              <h2><%= @about.title %></h2>
-              <%= raw @about.content.truncate(306) %>
-              <a href="<%= post_path(@about) %>" class="button icon fa-arrow-circle-right">了解更多</a>
+              <h3>直达客行业观点</h3>
+              <ul class="style2">
+                <% @posts.each do |post| %>
+                  <li><i class="icon fa-<%= ['star', 'star-half', 'star-half-o', 'start-o'][rand(3)]%>"></i>   <a href="<%= post_path(post.id) %>"><%= post.title %></a></li>
+                <% end %>
+              </ul>
             </section>
           </div>
-
+      </div>
+      <div class="4u important(collapse)">
+        <div id="content">
+          <section class="last">
+            <h3><%= @about.title %></h3>
+            <%= simple_format @about.content.truncate(150) %>
+            <a href="<%= post_path(@about) %>" class="button icon fa-arrow-circle-right">了解更多</a>
+          </section>
+        </div>
       </div>
     </div>
   </div>

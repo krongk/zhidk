@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @cases = Page.recent(6, :channel => 'case')
     @about = Page.find_by(short_title: 'about')
     @about ||= Page.first
+    @posts = Page.recent(10, channel: 'post')
   end
 
   def posts
