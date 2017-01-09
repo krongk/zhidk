@@ -11,13 +11,14 @@
 
           <div class="row">
             <% @posts.each do |post| %>
-              <div class="4u">
+              <div class="6u">
                 <!-- Box -->
                 <section class="box feature">
-                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
+                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>"/></a>
                   <div class="inner">
                     <header>
-                      <p><%= post.title %></p>
+                      <h2><%= link_to post.title.truncate(20), post_path(post.short_title) %></h2>
+                      <p><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
                     </header>
                   </div>
                 </section>
