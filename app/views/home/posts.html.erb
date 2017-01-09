@@ -5,7 +5,7 @@
 <!-- Main -->
 <div id="main-wrapper">
   <div class="container">
-    <div class="row 200%">
+    <div class="row">
       <div class="8u">
         <div id="content">
 
@@ -14,12 +14,10 @@
               <div class="6u">
                 <!-- Box -->
                 <section class="box feature">
-                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>"/></a>
+                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" style="border: solid 1px #e8e8e8;"/></a>
                   <div class="inner">
-                    <header>
-                      <h2><%= link_to post.title.truncate(20), post_path(post.short_title) %></h2>
-                      <p><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
-                    </header>
+                    <h2><%= link_to post.title.truncate(20), post_path(post.short_title) %></h2>
+                    <p><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
                   </div>
                 </section>
               </div>
