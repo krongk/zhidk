@@ -27,32 +27,18 @@
       </div>
       <div class="4u">
         <%= render 'layouts/sidebar' %>
+        <section class="widget thumbnails">
+          <h3>他们已经接入直达客</h3>
+          <div class="grid">
+            <div class="row no-collapse 50%">
+              <% @cases.each do |post| %>
+                <div class="6u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.get_image_path %>" alt="<%= post.title %>" /></a></div>
+              <% end %>
+            </div>
+          </div>
+          <a href="/case" class="button icon fa-file-text-o">查看更多</a>
+        </section>
       </div>
     </div>
   </div>
 </div>  
-
-<!-- Main -->
-<div id="main-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="12u">
-        <!-- Sidebar -->
-          <div id="sidebar">
-            <section class="widget thumbnails">
-              <h3>他们已经接入直达客</h3>
-              <div class="grid">
-                <div class="row no-collapse 50%">
-                  <% @cases.each do |post| %>
-                    <div class="3u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.get_image_path %>" alt="<%= post.title %>" /></a></div>
-                  <% end %>
-                </div>
-              </div>
-              <a href="/case" class="button icon fa-file-text-o">查看更多</a>
-            </section>
-          </div>
-      </div>
-
-    </div>
-  </div>
-</div>

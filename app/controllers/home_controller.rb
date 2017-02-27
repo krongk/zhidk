@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     @about = Page.find_by(short_title: 'about')
     @about ||= Page.first
     @posts = Page.recent(10, channel: 'post')
+    @home = Channel.find_by(short_title: 'index')
   end
 
   def channel
