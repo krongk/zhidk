@@ -15,6 +15,7 @@ Zhidak::Application.routes.draw do
   get 'contact' => 'home#contact', as: 'contact'
   get 'about' => 'home#about', as: 'about'
   get 'case' => 'home#case', as: 'case'
+  get 'channel/(:id)' => 'home#channel', as: 'channel'
   get 'portfolio' => 'home#portfolio', as: 'portfolio'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

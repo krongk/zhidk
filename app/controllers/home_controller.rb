@@ -1,10 +1,17 @@
 class HomeController < ApplicationController
   def index
-    @portfolios = Page.recent(12, :channel => 'portfolio')
+    #@portfolios = Page.recent(12, :channel => 'portfolio')
+    @portfolios = Channel.find_by(short_title: 'portfolio').children
     @cases = Page.recent(6, :channel => 'case')
     @about = Page.find_by(short_title: 'about')
     @about ||= Page.first
     @posts = Page.recent(10, channel: 'post')
+  end
+
+  def channel
+    @channel = Channel.find_by(short_title: params[:id])
+    @cases = Page.recent(6, :channel => 'case')
+    @relative_posts = @channel.pages.limit(10)
   end
 
   def posts

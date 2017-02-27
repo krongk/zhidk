@@ -4,7 +4,7 @@
   <section>
     <ul>
       <li><a href="javascript:void(0);" onclick="_MEIQIA._SHOWPANEL();" class="button big icon fa-arrow-circle-right">在线咨询</a></li><br/>
-      <li><a href="<%= price_path %>" class="button alt big icon fa-question-circle">价格方案</a></li>
+      <li><a href="http://builder.zhidak.com" target="_blank" class="button alt big icon fa-cubes">自助建站</a></li>
     </ul>
   </section>
 
@@ -12,7 +12,9 @@
     <h3>相关文章</h3>
     <ul class="style2">
       <% @relative_posts.each do |post| %>
-        <li><i class="icon fa-<%= ['star', 'star-half', 'star-half-o', 'start-o'][rand(3)]%>"></i>   <a href="<%= post_path(post.id) %>"><%= post.title %></a></li>
+        <li><i class="icon fa-<%= ['star', 'star-half', 'star-half-o', 'start-o'][rand(3)]%>"></i>   <a href="<%= post_path(post.id) %>"><%= post.title %></a>
+          <br/><small><%= post.keywords %></small>
+        </li>
       <% end %>
     </ul>
   </section>

@@ -1,0 +1,58 @@
+<% title @channel.title %>
+<% meta_keywords @channel.title %>
+<% meta_description @channel.title %>
+<!-- Main -->
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row 200%">
+      <div class="8u">
+        <div id="content">
+          <!-- Content -->
+          <article>
+            <h2><%= @channel.title %></h2>
+            <hr/>
+            <div class="row">
+              <div class="12u">
+               <%= @channel.keywords %>
+              </div>
+            </div>
+            <hr/>
+
+            <div class="post-content image fit">
+              <%= raw @channel.get_content %>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="4u">
+        <%= render 'layouts/sidebar' %>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<!-- Main -->
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+        <!-- Sidebar -->
+          <div id="sidebar">
+            <section class="widget thumbnails">
+              <h3>他们已经接入直达客</h3>
+              <div class="grid">
+                <div class="row no-collapse 50%">
+                  <% @cases.each do |post| %>
+                    <div class="3u"><a href="<%= post_path(post) %>" class="image fit"><img src="<%= post.get_image_path %>" alt="<%= post.title %>" /></a></div>
+                  <% end %>
+                </div>
+              </div>
+              <a href="/case" class="button icon fa-file-text-o">查看更多</a>
+            </section>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
