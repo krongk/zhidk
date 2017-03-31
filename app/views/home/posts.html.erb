@@ -6,28 +6,35 @@
 <div id="main-wrapper">
   <div class="container">
     <div class="row">
-      <div class="8u">
+      <div class="12u">
         <div id="content">
-
-          <div class="row">
+            <% first = 0 %>
+            <% last = 0 %>
             <% @posts.each do |post| %>
-              <div class="6u">
+              <% if first%3 == 0 %>
+                <div class="row">
+                <% last = 0 %>
+              <% end %>
+              <div class="4u">
                 <!-- Box -->
-                <section class="box feature">
-                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" style="border: solid 1px #e8e8e8;"/></a>
+                <section class="box feature" style="border: solid 1px #f7d2df;">
+                  <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>"/></a>
                   <div class="inner">
-                    <h2><%= link_to post.title.truncate(20), post_path(post.short_title) %></h2>
-                    <p><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
+                    <h2 style="line-height:26px"><%= link_to post.title, post_path(post.short_title) %></h2>
+                    <hr/>
+                    <p style="background: #f7d2df;"><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
                   </div>
                 </section>
               </div>
+              <% if last == 2 %>
+                </div>
+              <% end %>
+              <% first += 1 %>
+              <% last += 1 %>
             <% end %>
           </div>
           <%= will_paginate @posts %>
         </div>
-      </div>
-      <div class="4u">
-        <%= render 'layouts/sidebar' %>
       </div>
     </div>
   </div>
