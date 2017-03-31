@@ -20,9 +20,11 @@
                 <section class="box feature" style="border: solid 1px #f7d2df;">
                   <a href="<%= post_path(post.id)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>"/></a>
                   <div class="inner">
-                    <h2 style="line-height:26px"><%= link_to post.title, post_path(post.short_title) %></h2>
+                    <h2 style="line-height:26px">
+                      <%= link_to post.title, post_path(post.short_title) %></h2>
+                      <small><%= post.description %></small>
                     <hr/>
-                    <p style="background: #f7d2df;"><%= distance_of_time_in_words_to_now(post.updated_at) %>前 (<%= post.keywords %>)</p>
+                    <p style="color: #000;"><%= <%= post.keywords %></p>
                   </div>
                 </section>
               </div>
