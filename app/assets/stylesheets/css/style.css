@@ -6,6 +6,12 @@
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
+	font-family: 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp';
+
+  @font-face { font-family : fzzqhjt ; src:url(http://coolirand.qiniudn.com/fzzqhjt.ttf) }
+  h1, h2{
+    font-family: fzzqhjt, 'Microsoft YaHei';
+  }
 
 	body
 	{
@@ -33,32 +39,32 @@
 			-ms-animation: none !important;
 			animation: none !important;
 		}
-		
+
 	body,input,select,textarea
 	{
 		font-family: "Microsoft Yahei","Hiragino Sans GB",sans-serif, sans-serif;
 		font-size: 12pt;
-		color: #696969;
+		color: #222;
 		font-weight: 300;
 	}
-	
+
 	a
 	{
 		color: #ff4485;
 		text-decoration: underline;
 	}
-	
+
 		a:hover
 		{
 			text-decoration: none;
 		}
-	
+
 	h1, h2, h3, h4, h5, h6
 	{
 		color: #444;
 		font-weight: 400;
 	}
-	
+
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 	{
 		color: #ff4485;
@@ -71,12 +77,12 @@
 		font-weight: 600;
 		color: #444;
 	}
-	
+
 	i, em
 	{
 		font-style: italic;
 	}
-	
+
 	br.clear
 	{
 		clear: both;
@@ -88,40 +94,40 @@
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
 		top: -0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	hr
 	{
 		border: 0;
 		border-top: solid 1px #ff4486;
 	}
-	
+
 	blockquote
 	{
 		border-left: solid 0.5em #eee;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
-	}	
-	
+	}
+
 	p, ul, ol, dl, table
 	{
-		margin-bottom: 2em;
+		margin-bottom: 1.2em;
 	}
-	
+
 	/* Section/Article */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 5em;
 		}
-		
+
 			section > :last-child,
 			article > :last-child
 			{
@@ -138,12 +144,12 @@
 		{
 			margin: 0 0 2em 0;
 		}
-		
+
 			header h2, header h3
 			{
 				margin: 0 0 0.25em 0;
 			}
-			
+
 			header p
 			{
 				margin: 0;
@@ -159,7 +165,7 @@
 		form
 		{
 		}
-		
+
 			form label
 			{
 				display: block;
@@ -168,7 +174,7 @@
 				font-size: 0.8em;
 				color: #444;
 			}
-		
+
 			form input[type="text"],
 			form input[type="email"],
 			form input[type="password"],
@@ -199,7 +205,7 @@
 				line-height: 3em;
 				padding: 0 1em;
 			}
-				
+
 			form textarea
 			{
 				min-height: 9em;
@@ -237,12 +243,12 @@
 			}
 
 	/* Tables */
-	
+
 		table
 		{
 			width: 100%;
 		}
-		
+
 			table.default
 			{
 				width: 100%;
@@ -257,12 +263,12 @@
 					{
 						border-top: 0;
 					}
-			
+
 				table.default td
 				{
 					padding: 0.5em 1em 0.5em 1em;
 				}
-				
+
 				table.default th
 				{
 					text-align: left;
@@ -270,17 +276,17 @@
 					font-weight: 800;
 					margin: 0 0 1em 0;
 				}
-			
+
 				table.default thead
 				{
 					background: #404248;
 					color: #fff;
 				}
-				
+
 				table.default tfoot
 				{
 				}
-				
+
 				table.default tbody
 				{
 				}
@@ -291,13 +297,13 @@
 	    margin-left: auto;
 	    margin-right: auto;
 		}
-		
+
 		.image
 		{
 			display: inline-block;
 			outline: 0;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -314,20 +320,20 @@
 				display: block;
 				width: 100%;
 			}
-		
+
 			.image.featured
 			{
 				display: block;
 				width: 100%;
 				margin: 0 0 2.5em 0;
 			}
-		
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-		
+
 			.image.centered
 			{
 				display: block;
@@ -364,7 +370,7 @@
 			-ms-transition: background-color .25s ease-in-out;
 			transition: background-color .25s ease-in-out;
 		}
-		
+
 			input[type="button"]:hover,
 			input[type="submit"]:hover,
 			input[type="reset"]:hover,
@@ -372,7 +378,7 @@
 			{
 				background: #10a0d5;
 			}
-		
+
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
@@ -380,16 +386,16 @@
 			{
 				background: #20b0e5;
 			}
-		
+
 			.button.icon
 			{
 			}
-			
+
 				.button.icon:before
 				{
 					position: relative;
 				}
-		
+
 			input[type="button"].alt,
 			input[type="submit"].alt,
 			input[type="reset"].alt,
@@ -431,7 +437,7 @@
 				list-style: disc;
 				padding-left: 1em;
 			}
-			
+
 				ul.default li
 				{
 					padding-left: 0.5em;
@@ -447,13 +453,13 @@
 					padding: 0 0 0 0.25em;
 					margin: 0 0 0 0.25em;
 				}
-				
+
 					ul.actions li:first-child
 					{
 						margin-left: 0;
 						padding-left: 0;
 					}
-				
+
 			ul.menu li
 			{
 				border-left: solid 1px #e0e0e0;
@@ -471,7 +477,7 @@
 
 		ol
 		{
-		}	
+		}
 
 			ol.default
 			{
@@ -483,9 +489,9 @@
 				{
 					padding-left: 0.25em;
 				}
-	
-	/* Box */	
-	
+
+	/* Box */
+
 		.box
 		{
 			background: #e8e8e8;
@@ -540,7 +546,7 @@
 		.widget.contact
 		{
 		}
-		
+
 			.widget.contact ul
 			{
 				overflow: hidden;
@@ -549,7 +555,7 @@
 				top: 4px;
 				margin-bottom: 1.5em;
 			}
-			
+
 				.widget.contact ul li
 				{
 					display: inline-block;
@@ -574,7 +580,7 @@
 						-ms-transition: background-color .25s ease-in-out;
 						transition: background-color .25s ease-in-out;
 					}
-					
+
 						.widget.contact ul li a:before
 						{
 							color: #f3f3f3;
@@ -586,12 +592,12 @@
 						{
 							background: #444444;
 						}
-					
+
 						.widget.contact ul li a:active
 						{
 							background: #666666;
 						}
-				
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
@@ -599,17 +605,17 @@
 	#banner-wrapper
 	{
 	}
-	
+
 	#main-wrapper
 	{
 		background: #fff;
 		box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
 	}
-	
+
 	#footer-wrapper
 	{
 	}
-	
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -618,7 +624,7 @@
 	{
 		position: relative;
 	}
-	
+
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -639,12 +645,12 @@
 		#logo h1 a:visited{
 			color: #fff;
 		}
-		
+
 		#logo span
 		{
 			font-weight: 800;
 		}
-	
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -653,7 +659,7 @@
 	{
 		position: relative;
 	}
-	
+
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
@@ -662,18 +668,18 @@
 	{
 		margin-top: 0;
 	}
-	
+
 		#footer a
 		{
 			color: inherit;
 			text-decoration: none;
 		}
-	
+
 	#copyright
 	{
 		color: #aaa;
 	}
-	
+
 		#copyright a
 		{
 			color: inherit;
@@ -698,7 +704,7 @@
 		font-size: 2.0em;
 		text-align: center;
 	}
-	
+
 /*********************************************************************************/
 /* Post                                                                        */
 /*********************************************************************************/

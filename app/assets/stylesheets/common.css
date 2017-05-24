@@ -1,4 +1,7 @@
-
+#nav a{
+  font-size: 24pt;
+  font-family: fzzqhjt, 'Microsoft YaHei';
+}
 .bg-primary{
   background: #ff4486;
 }
@@ -65,9 +68,9 @@
     height: 0;
     overflow: hidden;
 }
- 
-.flexible-container iframe,   
-.flexible-container object,  
+
+.flexible-container iframe,
+.flexible-container object,
 .flexible-container embed {
     position: absolute;
     top: 0;
