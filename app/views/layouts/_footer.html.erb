@@ -1,4 +1,4 @@
-<% portfolios = Page.recent(8, :channel => 'portfolio') %>
+<% portfolios = Page.recent(10, :channel => 'portfolio') %>
 <!-- Footer -->
 <div id="footer-wrapper">
   <footer id="footer" class="container">
@@ -9,7 +9,7 @@
           <section class="widget links">
             <h3>行业解决方案</h3>
             <ul class="style2">
-            <% (0..3).each do |i| %>
+            <% (0..4).each do |i| %>
               <% post = portfolios[i] %>
               <% break if post.nil? %>
               <li><%= link_to post.title, post_path(post) %></li>
@@ -25,7 +25,7 @@
           <section class="widget links">
             <h3>&nbsp;</h3>
             <ul class="style2">
-              <% (4..7).each do |i| %>
+              <% (5..9).each do |i| %>
                 <% post = portfolios[i] %>
                 <% break if post.nil? %>
                 <li><%= link_to post.title, post_path(post) %></li>
@@ -43,6 +43,7 @@
               <li><a target="_blank" href="http://www.djker.cn">大健康众创空间</a></li>
               <li><a target="_blank" href="http://www.wedxt.com">微场景应用制作工具：维斗喜帖</a></li>
               <li><a target="_blank" href="http://www.raincms.cn">企业建站系统：RainCMS</a></li>
+              <li><a target="_blank" href="http://www.zhidat.com">内容营销系统：直达通</a></li>
               <li><a target="_blank" href="http://www.tanmer.com">探码科技</a></li>
             </ul>
           </section>
@@ -54,7 +55,8 @@
           <section class="widget contact last">
             <h3>联系我们</h3>
             <ul>
-              <li><a target="_blank" href="https://static.meiqia.com/dist/standalone.html?eid=1765" class="button big icon fa-comments"></a></li>
+              <li><a target="_blank" href="https://static.meiqia.com/dist/standalone.html?eid=1765"><span style="color:#fff;">在线</span></a></li>
+              <li><a href="http://www.tanmer.com/office" target="_blank"><span style="color:#fff;">定位</span></a></li>
             </ul>
           </section>
 
@@ -64,7 +66,7 @@
       <div class="12u">
         <div id="copyright">
           <ul class="menu">
-            <li>&copy; 直达客. <a href="www.tanmer.com" target="_blank">成都探码科技有限公司</a>版权所有</li><% unless mobile_device? %><li>成都市成华区建设北路龙湖三千星座A座2802室</li><% end %>
+            <li>&copy; 直达客. <a href="http://www.tanmer.com" target="_blank">成都探码科技有限公司</a>出品</li><li><% unless mobile_device? %>成都市成华区建设北路龙湖三千星座<% end %> </li>
             <li>蜀ICP备14021922号</li>
             <li>
               <!-- cnzz start -->
