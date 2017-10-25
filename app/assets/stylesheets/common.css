@@ -23,6 +23,12 @@
   color: #ff4486;
 }
 
+.hidden_em{
+  display: none;
+}
+.hidden_me{
+  display: none;
+}
 /*** qq-wechat ***/
 .social-links {
     list-style:none;
