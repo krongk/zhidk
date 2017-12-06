@@ -160,7 +160,7 @@
 		{
 			float: left;
 			margin: 0 0.35em 0 0;
-			padding: 0.25em 0.2em 0.25em 0.2em;
+			padding: 0.4em;
 			font-size: 3.25em;
 			letter-spacing: 0.05em;
 		}
@@ -191,8 +191,11 @@
 			#nav ul li
 			{
 				float: left;
-				line-height: 4.5em;
-				padding-left: 1.5em;
+				line-height: 4.0em;
+				padding: 0em 1em;
+				border-right: solid 1px #ff4485;
+				border-bottom: solid 1px #ff4485;
+				border-bottom-right-radius:1em;
 			}
 
 				#nav ul li a,
@@ -218,12 +221,13 @@
 
 			#nav ul li:hover
 			{
+				background: #ff4485;
 			}
 
 				#nav ul li:hover a,
 				#nav ul li:hover span
 				{
-					background: #fff;
+					color: #fff;
 				}
 
 			#nav ul li.active
@@ -238,11 +242,12 @@
 
 			#nav ul li.current
 			{
+				background: #ff4485;
+
 			}
 
 				#nav ul li.current a
 				{
-					background: #444;
 					color: #fff;
 				}
 
