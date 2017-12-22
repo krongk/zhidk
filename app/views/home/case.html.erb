@@ -1,6 +1,6 @@
-<% title '直达客解决方案' %>
-<% meta_keywords '解决方案' %>
-<% meta_description '直达电话：18080810818' %>
+<% title '直达客成功案例，直达客建站系统！' %>
+<% meta_keywords '成功案例，直达客网站建设，直达客手机网站，高端网站设计' %>
+<% meta_description '直达客新一代多终端适配网站建设平台，帮助企业建立网络营销平台，直达电话：18080810818' %>
 
 <!-- Banner -->
 <div id="banner-wrapper">
@@ -22,8 +22,13 @@
 <!-- Features -->
 <div id="main-wrapper">
   <div class="container">
-    <div class="row">
-      <% @posts.each do |post| %>
+    <% first = 0 %>
+    <% last = 0 %>
+    <% @posts.each do |post| %>
+      <% if first%3 == 0 %>
+        <div class="row">
+        <% last = 0 %>
+      <% end %>
         <div class="4u">
           <!-- Box -->
           <section class="box feature">
@@ -37,8 +42,12 @@
             </div>
           </section>
         </div>
+      <% if last == 2 %>
+        </div>
       <% end %>
-    </div>
+      <% first += 1 %>
+      <% last += 1 %>
+    <% end %>
     <div class="row">
       <div class="12u">
         <%= will_paginate @posts %>

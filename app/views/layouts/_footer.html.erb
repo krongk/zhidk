@@ -7,7 +7,7 @@
 
         <!-- Links -->
           <section class="widget links">
-            <h3>行业解决方案</h3>
+            <h3><a href="/portfolio" class="icon fa-cube"> 行业解决方案</a></h3>
             <ul class="style2">
             <% (0..4).each do |i| %>
               <% post = portfolios[i] %>
@@ -38,22 +38,23 @@
         <% unless mobile_device? %>
         <!-- Links -->
           <section class="widget links">
-            <h3>产品系列</h3>
+            <h3><a href="JavaScript:void(0);" class="icon fa-home"> 系列产品</a></h3>
             <ul class="style2">
+              <li><a target="_blank" href="http://www.qzhida.com">微信小程序开发：轻直达</a></li>
               <li><a target="_blank" href="http://www.wedxt.com">微场景工具：维斗喜帖</a></li>
-              <li><a target="_blank" href="http://www.raincms.cn">企业建站系统：RainCMS</a></li>
+              <li><a target="_blank" href="http://www.raincms.cn">CMS建站系统：RainCMS</a></li>
               <li><a target="_blank" href="http://www.zhidat.com">内容营销系统：直达通</a></li>
               <li><a target="_blank" href="http://www.dagle.cn">企业ERP系统：Dagle</a></li>
-              <li><a target="_blank" href="http://www.tanmer.com">探码科技</a></li>
             </ul>
           </section>
         <% end %>
       </div>
       <div class="3u">
-
         <!-- Contact -->
           <section class="widget contact last">
-            <h3>联系我们</h3>
+            <h3><a href="JavaScript:void(0);" class="icon fa-comments"> 联系我们</a></h3>
+            <p><a class="fa fa-arrow-circle-right" href="/about">  关于直达客</a></p>
+            <p><a class="fa fa-money" href="/price">  价格方案</a></p>
             <ul>
               <li><a target="_blank" href="https://static.meiqia.com/dist/standalone.html?eid=1765"><span style="color:#fff;">在线</span></a></li>
               <li><a href="http://www.tanmer.com/office" target="_blank"><span style="color:#fff;">定位</span></a></li>
@@ -66,14 +67,13 @@
       <div class="12u">
         <div id="copyright">
           <ul class="menu">
-            <li>&copy; 直达客. 小程序<a href="http://www.tanmer.com" target="_blank">成都探码科技有限公司</a>出品</li><li><% unless mobile_device? %>成都市成华区建设北路龙湖三千星座<% end %> </li>
+            <li>&copy; 直达客. <a href="http://www.tanmer.com" target="_blank">成都探码科技有限公司</a>出品</li><li><% unless mobile_device? %>成都市成华区建设北路龙湖三千星座<% end %> </li>
             <li>蜀ICP备14021922号</li>
             <li>
               <!-- cnzz start -->
               <script src="http://s95.cnzz.com/stat.php?id=1254935503&web_id=1254935503" language="JavaScript"></script>
             </li>
           </ul>
-
         </div>
       </div>
     </div>

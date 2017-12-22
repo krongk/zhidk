@@ -1,6 +1,5 @@
 <% title '关于直达客' %>
-<% meta_keywords '关于直达客' %>
-<% meta_description '直达电话：18080810818' %>
+<% meta_keywords '关于直达客，直达客网站建设，高端品牌网站，多终端网站' %>
+<% meta_description '直达客高端品牌网站建设，提供网站、手机网站、小程序开发。直达电话：18080810818' %>
 
-<h1>Home#about</h1>
-<p>Find me in app/views/home/about.html.erb</p>
+<%= raw Page.find_by(short_title: 'about').try(:content) %>
