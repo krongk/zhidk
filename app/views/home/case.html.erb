@@ -35,7 +35,7 @@
             <a href="<%= post_path(post.short_title)%>" class="image featured"><img src="<%= post.get_image_path %>" alt="<%= post.keywords %>" /></a>
             <div class="inner">
               <header>
-                <h2><%= link_to post.title, post_path(post.short_title) %></h2>
+                <h2><%= link_to post.title, post_path(post.short_title, from: 'case') %></h2>
                 <p><%= post.keywords %></p>
               </header>
               <p><%= post.description %></p>
