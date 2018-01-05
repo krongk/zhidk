@@ -45,7 +45,7 @@
   </script>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= content_for?(:body_css) ? yield(:body_css) : 'homepage' %>" style='background: #ccc url("http://www.zhidak.com/assets/bg#{rand(3)}.jpg")%>) top center no-repeat;'>
+<body class="<%= content_for?(:body_css) ? yield(:body_css) : 'homepage' %>" style='background: #ccc url("http://www.zhidak.com/assets/bg<%=rand(3)%>.jpg")%>) top center no-repeat;'>
   <%= render 'layouts/header' %>
   <%= render 'layouts/message' %>
   <%= yield %>
