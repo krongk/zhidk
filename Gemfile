@@ -1,5 +1,6 @@
-source 'https://gems.ruby-china.org'
-ruby '2.2.1'
+source "https://gems.ruby-china.com"
+
+ #ruby '2.2.1'
 
 gem 'rails', '~> 4.2.1'
 gem 'sass-rails', '~> 5.0.3'
@@ -39,7 +40,7 @@ gem 'paperclip'
 gem 'paperclip-qiniu'
 
 #Excel processing
-# gem 'roo', '>=1.11.2' 
+# gem 'roo', '>=1.11.2'
 # gem 'rubyzip', "~> 0.9.9" #fix the error: cannot load such file -- zip/zipfilesystem
 
 #Wizard

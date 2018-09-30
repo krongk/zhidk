@@ -16,7 +16,7 @@ GIT
       railties (~> 4.0)
 
 GEM
-  remote: https://gems.ruby-china.org/
+  remote: https://gems.ruby-china.com/
   specs:
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
@@ -348,9 +348,3 @@ DEPENDENCIES
   uglifier (~> 2.7.1)
   web-console (~> 2.0)
   whenever
-
-RUBY VERSION
-   ruby 2.2.1p85
-
-BUNDLED WITH
-   1.12.5

@@ -6,16 +6,16 @@
     <% unless mobile_device? %>
       <div id="logo" class="hidden-xs">
         <h1><a href="/" title="直达客">直达客</a></h1>
-      </div>
+      </div>直达客
     <% end %>
-    
+
     <!-- Nav -->
       <nav id="nav">
         <ul>
           <li class="<%= 'current' if params[:action] == 'index2' %>"><a href="/">首页</a></li>
           <li class="<%= 'current' if params[:action] == 'case' || params[:from] == 'case' %>"><a href="<%= case_path %>">建站案例</a></li>
           <li class="<%= 'current' if ['posts', 'post'].include? params[:action] %>"><a href="<%= posts_path %>">营销软文</a></li>
-          <li><a  href="http://www.zhidat.com" target="_blank">内容自媒体</a></li>
+          <li><a  href="http://app.zhidat.com" target="_blank">内容自媒体</a></li>
           <li><a href="http://www.tanmer.com/about" target="_blank">联系我们</a></li>
         </ul>
       </nav>

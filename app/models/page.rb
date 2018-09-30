@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   default_scope { order('updated_at DESC') }
 
   belongs_to :channel
-  self.per_page = 9
+  self.per_page = 18
 
   def get_image_path
     if image_path
@@ -31,7 +31,7 @@ class Page < ActiveRecord::Base
   def short_description(count = 50)
     self.description.to_s.truncate(count)
   end
-  
+
   def format_date
     self.updated_at.strftime("%Y-%m-%d") unless self.updated_at.nil?
   end
@@ -47,7 +47,7 @@ class Page < ActiveRecord::Base
   end
 
   #最近新闻
-  #params: 
+  #params:
   # => typo = ['article', 'image', 'product']
   # => channel =[ channel.short_title, ]
   # => properties =[recommend, top, hot]
